@@ -1,5 +1,7 @@
+import { withTV } from "tailwind-variants/transformer";
+
 /** @type {import('tailwindcss').Config} */
-const config = {
+const config = withTV({
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   plugins: [],
   theme: {
@@ -13,8 +15,11 @@ const config = {
         "theme-red": "#A00E0E",
         "theme-yellow": "#F0BA32",
       },
+      spacing: {
+        162: "648px",
+      },
     },
   },
-};
+});
 
 export default config;
