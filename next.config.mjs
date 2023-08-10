@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const config = {
-  reactStrictMode: true,
+  experimental: { typedRoutes: false },
   poweredByHeader: false,
-  experimental: { typedRoutes: true },
+  reactStrictMode: true,
 };
 
 export default config;
