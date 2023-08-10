@@ -3,7 +3,7 @@ import { withTV } from "tailwind-variants/transformer";
 /** @type {import('tailwindcss').Config} */
 const config = withTV({
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {
       colors: {
