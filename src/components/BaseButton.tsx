@@ -32,15 +32,15 @@ type Common = {
 };
 
 type Button = Common & { button: boolean; onClick: DOMAttributes<HTMLButtonElement>["onClick"] };
-type Link<T extends string> = Common & { linkProps: LinkProps<T> };
+type Link = Common & { linkProps: LinkProps };
 
-const isButton = <T extends string>(props: Button | Link<T>): props is Button => {
+const isButton = (props: Button | Link): props is Button => {
   return "button" in props;
 };
 
-export default function BaseButton<T extends string>(props: Button | Link<T>) {
+export default function BaseButton<T extends string>(props: Button | Link) {
   const { children, stylePayload } = props;
-  return isButton<string>(props) ? (
+  return isButton(props) ? (
     <button type="button" className={button(stylePayload)} onClick={props.onClick}>
       {children}
     </button>
