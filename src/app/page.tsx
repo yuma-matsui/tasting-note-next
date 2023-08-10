@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { AboutSection, TopTitle, WithRegistrationSection } from "@/app/_components";
+import { AboutSection, DemoImagesSection, TopTitle, WithRegistrationSection } from "@/app/_components";
 
 export const metadata: Metadata = {
   title: "Tasting Note",
@@ -13,6 +13,7 @@ export default function WelcomePage() {
       <TopTitle />
       <div className="space-y-5">
         <AboutSection />
+        <DemoImagesSection />
         <WithRegistrationSection />
       </div>
     </div>
