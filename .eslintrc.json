@@ -8,9 +8,14 @@
     "import/newline-after-import": "warn",
     "import/no-duplicates": "warn",
     "simple-import-sort/exports": "warn",
-    "simple-import-sort/imports": "warn",
-    "sort-keys-custom-order/object-keys": ["warn", { "orderedKeys": ["id", "name", "title", "description"] }],
-    "sort-keys-custom-order/type-keys": ["warn", { "orderedKeys": ["id", "name", "title", "description"] }],
+    "sort-keys-custom-order/object-keys": [
+      "warn",
+      { "orderedKeys": ["id", "name", "title", "description", "sm", "md", "lg"] }
+    ],
+    "sort-keys-custom-order/type-keys": [
+      "warn",
+      { "orderedKeys": ["id", "name", "title", "description", "sm", "md", "lg"] }
+    ],
     "unused-imports/no-unused-imports": "warn",
     "@next/next/no-img-element": "off"
   },

@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 
-import { AboutSection, DemoImagesSection, TopTitle, WithRegistrationSection } from "@/app/_components";
+import { BaseButton } from "@/components";
+
+import {
+  AboutSection,
+  DemoImagesSection,
+  GoogleSignInLink,
+  TopTitle,
+  WithRegistrationSection,
+} from "@/app/_components";
 
 export const metadata: Metadata = {
   title: "Tasting Note",
@@ -15,6 +23,12 @@ export default function WelcomePage() {
         <AboutSection />
         <DemoImagesSection />
         <WithRegistrationSection />
+        <div className="mx-auto mb-6 flex justify-between sm:w-96">
+          <BaseButton stylePayload={{ color: "red", size: "md" }} linkProps={{ href: "/" }}>
+            すぐにはじめる
+          </BaseButton>
+          <GoogleSignInLink />
+        </div>
       </div>
     </div>
   );
