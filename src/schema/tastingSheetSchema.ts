@@ -10,7 +10,7 @@ const timeSchema = enumType(TASTING_TIMES, "記録時間を選択してくださ
 const colorSchema = enumType(WINE_COLORS, "色を選択してください");
 
 const nameSchema: StringSchema<string> = string([
-  minLength(1, "入力が必須です"),
+  minLength(1, "入力必須です"),
   maxLength(255, "255文字以内で入力してください"),
 ]);
 
