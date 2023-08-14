@@ -27,8 +27,6 @@ export default function AppearanceForm({
     intensities,
   } = useFormLabels(color);
 
-  console.log(appearanceColors);
-
   return (
     <>
       <FormTitle title="外観" />
