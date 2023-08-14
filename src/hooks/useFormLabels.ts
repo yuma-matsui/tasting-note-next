@@ -8,6 +8,16 @@ import {
   CLARITIES_RED,
   CLARITIES_WHITE,
   CONSISTENCIES,
+  FLAVOR_FIRST_IMPRESSIONS_RED,
+  FLAVOR_FIRST_IMPRESSIONS_WHITE,
+  FLAVOR_FLOWERS_RED,
+  FLAVOR_FLOWERS_WHITE,
+  FLAVOR_FRUITS_RED,
+  FLAVOR_FRUITS_WHITE,
+  FLAVOR_IMPRESSIONS_RED,
+  FLAVOR_IMPRESSIONS_WHITE,
+  FLAVOR_SPICES_RED,
+  FLAVOR_SPICES_WHITE,
   INTENSITIES_RED,
   INTENSITIES_WHITE,
 } from "@/assets/labels";
@@ -21,6 +31,11 @@ export default function useFormLabels(color: TastingSheetType["color"]) {
     brightnesses: isRed(color) ? BRIGHTNESSES_RED : BRIGHTNESSES_WHITE,
     clarities: isRed(color) ? CLARITIES_RED : CLARITIES_WHITE,
     consistencies: CONSISTENCIES,
+    flavorFirstImpressions: isRed(color) ? FLAVOR_FIRST_IMPRESSIONS_RED : FLAVOR_FIRST_IMPRESSIONS_WHITE,
+    flavorFlowers: isRed(color) ? FLAVOR_FLOWERS_RED : FLAVOR_FLOWERS_WHITE,
+    flavorFruits: isRed(color) ? FLAVOR_FRUITS_RED : FLAVOR_FRUITS_WHITE,
+    flavorImpressions: isRed(color) ? FLAVOR_IMPRESSIONS_RED : FLAVOR_IMPRESSIONS_WHITE,
+    flavorSpices: isRed(color) ? FLAVOR_SPICES_RED : FLAVOR_SPICES_WHITE,
     intensities: isRed(color) ? INTENSITIES_RED : INTENSITIES_WHITE,
   };
 }
