@@ -72,6 +72,17 @@ const optionInput = tv({
   },
 });
 
+const getText = (value: string) => {
+  switch (value) {
+    case "red":
+      return "赤";
+    case "white":
+      return "白";
+    default:
+      return value;
+  }
+};
+
 export default function OptionInput({
   name,
   checkbox = false,
@@ -99,7 +110,7 @@ export default function OptionInput({
         value={value}
         disabled={disabled}
       />
-      <span className={text()}>{value}</span>
+      <span className={text()}>{getText(value)}</span>
     </label>
   );
 }
