@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .checkbox.checkbox-success,
+  .checkbox.checkbox-error {
+    --chkfg: 4 100% 100%;
+  }
+}
