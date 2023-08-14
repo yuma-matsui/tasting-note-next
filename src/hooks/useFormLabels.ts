@@ -1,8 +1,17 @@
 import {
+  ACIDITIES_RED,
+  ACIDITIES_WHITE,
+  AFTER_TASTES,
+  ALCOHOLS,
   APPEARANCE_COLORS_RED,
   APPEARANCE_COLORS_WHITE,
   APPEARANCE_IMPRESSIONS_RED,
   APPEARANCE_IMPRESSIONS_WHITE,
+  ASTRINGENTS,
+  ATTACKS,
+  BALANCES_RED,
+  BALANCES_WHITE,
+  BITTERNESS,
   BRIGHTNESSES_RED,
   BRIGHTNESSES_WHITE,
   CLARITIES_RED,
@@ -20,14 +29,22 @@ import {
   FLAVOR_SPICES_WHITE,
   INTENSITIES_RED,
   INTENSITIES_WHITE,
+  SWEETNESS,
 } from "@/assets/labels";
 import { TastingSheetType } from "@/schema/tastingSheetSchema";
 import { isRed } from "@/utils";
 
 export default function useFormLabels(color: TastingSheetType["color"]) {
   return {
+    acidities: isRed(color) ? ACIDITIES_RED : ACIDITIES_WHITE,
+    afterTastes: AFTER_TASTES,
+    alcohols: ALCOHOLS,
     appearanceColors: isRed(color) ? APPEARANCE_COLORS_RED : APPEARANCE_COLORS_WHITE,
     appearanceImpressions: isRed(color) ? APPEARANCE_IMPRESSIONS_RED : APPEARANCE_IMPRESSIONS_WHITE,
+    astringents: ASTRINGENTS,
+    attacks: ATTACKS,
+    balances: isRed(color) ? BALANCES_RED : BALANCES_WHITE,
+    bitterness: BITTERNESS,
     brightnesses: isRed(color) ? BRIGHTNESSES_RED : BRIGHTNESSES_WHITE,
     clarities: isRed(color) ? CLARITIES_RED : CLARITIES_WHITE,
     consistencies: CONSISTENCIES,
@@ -37,5 +54,6 @@ export default function useFormLabels(color: TastingSheetType["color"]) {
     flavorImpressions: isRed(color) ? FLAVOR_IMPRESSIONS_RED : FLAVOR_IMPRESSIONS_WHITE,
     flavorSpices: isRed(color) ? FLAVOR_SPICES_RED : FLAVOR_SPICES_WHITE,
     intensities: isRed(color) ? INTENSITIES_RED : INTENSITIES_WHITE,
+    sweetness: SWEETNESS,
   };
 }
