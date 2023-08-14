@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 import { TastingSheetType } from "@/schema/tastingSheetSchema";
 import { FieldPath, UseFormRegister } from "react-hook-form";
 import { tv } from "tailwind-variants";
@@ -74,7 +72,7 @@ const optionInput = tv({
   },
 });
 
-export default memo(function OptionInput({
+export default function OptionInput({
   name,
   checkbox = false,
   checked,
@@ -104,4 +102,4 @@ export default memo(function OptionInput({
       <span className={text()}>{value}</span>
     </label>
   );
-});
+}

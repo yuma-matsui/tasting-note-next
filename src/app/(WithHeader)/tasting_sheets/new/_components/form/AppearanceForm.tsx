@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 import { useFormLabels } from "@/hooks";
 import { TastingSheetType } from "@/schema/tastingSheetSchema";
 import { UseFormRegister, UseFormWatch } from "react-hook-form";
@@ -9,7 +7,7 @@ import OptionInput from "@/app/(WithHeader)/tasting_sheets/new/_components/form/
 
 import SectionWrapper from "./SectionWrapper";
 
-export default memo(function AppearanceForm({
+export default function AppearanceForm({
   register,
   watch,
 }: {
@@ -28,6 +26,8 @@ export default memo(function AppearanceForm({
     consistencies,
     intensities,
   } = useFormLabels(color);
+
+  console.log(appearanceColors);
 
   return (
     <>
@@ -115,4 +115,4 @@ export default memo(function AppearanceForm({
       </SectionWrapper>
     </>
   );
-});
+}
