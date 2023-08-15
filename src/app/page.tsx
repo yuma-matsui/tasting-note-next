@@ -24,7 +24,7 @@ export default function WelcomePage() {
         <DemoImagesSection />
         <WithRegistrationSection />
         <div className="mx-auto mb-6 flex justify-between sm:w-96">
-          <BaseButton stylePayload={{ color: "red", size: "md" }} linkProps={{ href: "/" }}>
+          <BaseButton stylePayload={{ color: "red", size: "md" }} linkProps={{ href: "/tasting_sheets/new" }}>
             すぐにはじめる
           </BaseButton>
           <GoogleSignInLink />

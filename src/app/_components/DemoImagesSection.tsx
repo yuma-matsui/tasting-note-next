@@ -1,8 +1,9 @@
+import appearance from "@/assets/images/appearance.jpg";
+import conclusion from "@/assets/images/conclusion.jpg";
+import flavor from "@/assets/images/flavor.jpg";
+import taste from "@/assets/images/taste.jpg";
+
 import DemoImage from "@/app/_components/DemoImage";
-import appearance from "@/app/assets/images/appearance.jpg";
-import conclusion from "@/app/assets/images/conclusion.jpg";
-import flavor from "@/app/assets/images/flavor.jpg";
-import taste from "@/app/assets/images/taste.jpg";
 
 export default function DemoImagesSection() {
   return (

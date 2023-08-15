@@ -4,16 +4,16 @@ import Link, { LinkProps } from "next/link";
 import { tv, VariantProps } from "tailwind-variants";
 
 const button = tv({
-  base: "rounded-full py-2 border-transparent text-white cursor-pointer text-center",
+  base: "rounded-full py-2 border-transparent text-white text-center",
   defaultVariants: {
     size: "sm",
   },
   variants: {
     color: {
-      green: "bg-theme-green",
-      outlineGreen: "bg-transparent border border-theme-green text-theme-green",
-      outlineRed: "bg-transparent border border-theme-red text-theme-red",
+      ["outline-red"]: "bg-transparent border border-theme-red text-theme-red",
+      ["outline-white"]: "bg-transparent border border-theme-green text-theme-green",
       red: "bg-theme-red",
+      white: "bg-theme-green",
     },
     disabled: {
       true: "opacity-25",
@@ -41,7 +41,12 @@ const isButton = (props: Button | Link): props is Button => {
 export default function BaseButton<T extends string>(props: Button | Link) {
   const { children, stylePayload } = props;
   return isButton(props) ? (
-    <button type="button" className={button(stylePayload)} onClick={props.onClick}>
+    <button
+      type="button"
+      className={button(stylePayload)}
+      onClick={props.onClick}
+      disabled={props.stylePayload.disabled}
+    >
       {children}
     </button>
   ) : (

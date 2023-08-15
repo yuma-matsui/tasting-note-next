@@ -3,7 +3,20 @@ import { withTV } from "tailwind-variants/transformer";
 /** @type {import('tailwindcss').Config} */
 const config = withTV({
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
-  plugins: [require("@tailwindcss/typography")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          error: "#A00E0E",
+          primary: "#3b82f6",
+          success: "#009250",
+          warning: "#F0BA32",
+        },
+      },
+    ],
+  },
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   theme: {
     extend: {
       colors: {
