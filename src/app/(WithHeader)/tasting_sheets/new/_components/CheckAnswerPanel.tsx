@@ -3,6 +3,7 @@ import { TastingSheetType } from "@/schema/tastingSheetSchema";
 import { UseFormWatch } from "react-hook-form";
 import { tv } from "tailwind-variants";
 
+import CheckAnswerDataList from "@/app/(WithHeader)/tasting_sheets/new/_components/CheckAnswerDataList";
 import FormTitle from "@/app/(WithHeader)/tasting_sheets/new/_components/form/FormTitle";
 
 const LABELS = [
@@ -91,17 +92,16 @@ export default function CheckAnswerPanel({ watch }: { watch: UseFormWatch<Tastin
         ))}
       </div>
 
-      <div className="my-6 w-full border-2 border-black">
+      <div className="w-full border-2 border-black">
         {LABELS.filter((label) => selected(label.type)).map((label) => (
           <dl key={label.type}>
             {label.headings.map((heading) => {
               return watch(heading.name) ? (
-                <>
-                  <dt className="box-content border-y border-gray-400 bg-gray-300 p-2">
-                    <span className="text-base font-bold">{heading.title}</span>
-                  </dt>
-                  {<dd className="break-words p-2">{formatAnswer(watch(heading.name))}</dd>}
-                </>
+                <CheckAnswerDataList
+                  key={heading.name}
+                  title={heading.title}
+                  answer={formatAnswer(watch(heading.name))}
+                />
               ) : null;
             })}
           </dl>
