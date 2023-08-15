@@ -2,9 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   .checkbox.checkbox-success,
   .checkbox.checkbox-error {
     --chkfg: 4 100% 100%;
+  }
+
+  .tab.tab-success {
+    @apply text-theme-green opacity-50;
+  }
+  .tab.tab-error {
+    @apply text-theme-red opacity-50;
+  }
+  .tabs-boxed button.tab.tab-active.tab-success {
+    background-color: hsl(var(--su) / var(--tw-bg-opacity));
+    @apply opacity-100 text-white;
+  }
+  .tabs-boxed button.tab.tab-active.tab-error {
+    background-color: hsl(var(--er) / var(--tw-bg-opacity));
+    @apply opacity-100 text-white;
+  }
+  .tabs-boxed button.tab.tab-active.tab-success:hover {
+    @apply text-white;
+  }
+  .tabs-boxed button.tab.tab-active.tab-error:hover {
+    @apply text-white;
   }
 }
