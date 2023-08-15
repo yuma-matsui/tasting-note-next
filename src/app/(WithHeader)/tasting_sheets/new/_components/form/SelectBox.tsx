@@ -23,7 +23,6 @@ export default function SelectBox({
         border-black
       "
     >
-      <option disabled>選択してください</option>
       {options.map((option) => (
         <option key={option} value={option}>
           {option}
