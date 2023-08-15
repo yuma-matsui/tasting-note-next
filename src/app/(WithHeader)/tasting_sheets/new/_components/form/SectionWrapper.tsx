@@ -7,7 +7,7 @@ import SectionHeading from "@/app/(WithHeader)/tasting_sheets/new/_components/fo
 const form = tv({
   slots: {
     container: "flex flex-wrap",
-    wrapper: "w-full mt-4 border-black border-2 mb-4",
+    wrapper: "w-full border-black border-2",
   },
 });
 
